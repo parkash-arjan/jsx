@@ -6,9 +6,20 @@
 
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
 
 const element = document.getElementById("root");
 const root = ReactDOM.createRoot(element);
+
+function App() {
+  const inputType = "number";
+  const minValue = 5;
+  return (
+    <input
+      type={inputType}
+      min={minValue}
+      style={{ color: "red", border: "3px solid" }}
+    />
+  );
+}
 
 root.render(<App></App>);

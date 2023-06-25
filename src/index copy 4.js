@@ -6,9 +6,21 @@
 
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
 
 const element = document.getElementById("root");
 const root = ReactDOM.createRoot(element);
+
+function App() {
+  return (
+    <div className="wrapper">
+      <textarea
+        readOnly={true}
+        maxLength={3}
+        spellCheck={true}
+        style={{ backgroundColor: "gray" }}
+      />
+    </div>
+  );
+}
 
 root.render(<App></App>);

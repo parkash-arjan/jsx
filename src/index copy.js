@@ -6,9 +6,18 @@
 
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
 
 const element = document.getElementById("root");
 const root = ReactDOM.createRoot(element);
+
+function App() {
+  const date = new Date();
+  const dateTime = date.toLocaleDateString();
+  return (
+    <h2>
+      {dateTime} --- {date.toLocaleTimeString()}
+    </h2>
+  );
+}
 
 root.render(<App></App>);
